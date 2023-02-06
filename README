@@ -32,6 +32,15 @@ TABLE OF CONTENTS
     2.1.14. Binary Search in Sorted Array
     2.1.15. Sort an Array
     2.1.16. Coin Row Problem
+  2.2. Additional static helper functions used 
+    2.2.1. static char* set_intal_zero();
+    2.2.2. static char* set_intal_one();
+    2.2.3. static char* intal_copy(const char *intal);
+    2.2.4. static int get_value(const char *intal, int len, int index);
+    2.2.5. static char* strip_leading_zeroes(char *nintal, int size);
+    2.2.6. static char* intal_by_two(const char *intal);
+    2.2.7. static void merge(char **arr, int l, int m, int r);
+    2.2.8. static void merge_sort(char **arr, int l, int r);
 
 3. FUTURE WORK
   3.1. Additional Functionalities 
@@ -545,6 +554,74 @@ TABLE OF CONTENTS
 
     ----------------------------------------------------------------------------
 
+  2.2. Additional static helper functions used (See implementation file for 
+       details): 
+
+    2.2.1. static char* set_intal_zero();
+      
+      Input Parameter(s)  : None
+      Output Return Value : An intal representing the integer zero
+
+    ----------------------------------------------------------------------------
+
+    2.2.2. static char* set_intal_one();
+      
+      Input Parameter(s)  : None
+      Output Return Value : An intal representing the integer one
+
+    ----------------------------------------------------------------------------
+
+    2.2.3. static char* intal_copy(const char *intal);
+      
+      Input Parameter(s)  : An intal
+      Output Return Value : A copy (with new memory allocation) of the input 
+                            intal
+
+    ----------------------------------------------------------------------------
+
+    2.2.4. static int get_value(const char *intal, int len, int index);
+      
+      Input Parameter(s)  : An intal, its length (not including null character) 
+                            and an index position (from the end i.e., 0th index 
+                            is the last digit character)
+      Output Return Value : An int value of the digit character at the input 
+                            index position if 0 <= index < len, otherwise int 0
+
+    ----------------------------------------------------------------------------
+
+    2.2.5. static char* strip_leading_zeroes(char *nintal, int size);
+      
+      Input Parameter(s)  : A possibly invalid intal (nintal) with leading 
+                            zeroes and the size occupied by it (including the 
+                            null character)
+      Output Return Value : A valid intal with leading zeroes removed
+
+    ----------------------------------------------------------------------------
+
+    2.2.6. static char* intal_by_two(const char *intal);
+      
+      Input Parameter(s)  : An intal
+      Output Return Value : An intal representing the input intal divided by 2
+
+    ----------------------------------------------------------------------------
+
+    2.2.7. static void merge(char **arr, int l, int m, int r);
+      
+      Input Parameter(s)  : An (sub)array of intals, and the index positions of 
+                            the leftmost, middle and rightmost elements of the 
+                            sorted (sub)array to be merged
+      Output Return Value : None
+
+    ----------------------------------------------------------------------------
+    
+    2.2.8. static void merge_sort(char **arr, int l, int r);
+      
+      Input Parameter(s)  : An (sub)array of intals, and the index positions of 
+                            the bounding left and right elements which is to be 
+                            sorted and merged
+      Output Return Value : None
+
+    ----------------------------------------------------------------------------
 
 ================================================================================
 
